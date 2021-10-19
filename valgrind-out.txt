@@ -1,0 +1,125 @@
+==80== Memcheck, a memory error detector
+==80== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==80== Using Valgrind-3.15.0-608cb11914-20190413 and LibVEX; rerun with -h for copyright info
+==80== Command: ./a.out
+==80== Parent PID: 11
+==80== 
+--80-- 
+--80-- Valgrind options:
+--80--    --leak-check=full
+--80--    --show-leak-kinds=all
+--80--    --track-origins=yes
+--80--    --verbose
+--80--    --log-file=valgrind-out.txt
+--80--    --vgdb=no
+--80-- Contents of /proc/version:
+--80--   Linux version 4.4.0-18362-Microsoft (Microsoft@Microsoft.com) (gcc version 5.4.0 (GCC) ) #1049-Microsoft Thu Aug 14 12:01:00 PST 2020
+--80-- 
+--80-- Arch and hwcaps: AMD64, LittleEndian, amd64-cx16-lzcnt-rdtscp-sse3-ssse3-avx-avx2-bmi-f16c-rdrand
+--80-- Page sizes: currently 4096, max supported 4096
+--80-- Valgrind library directory: /usr/lib/x86_64-linux-gnu/valgrind
+--80-- Reading syms from /mnt/b/Users/Aero/OneDrive - Texas A&M University/Academics/2021 Spring/CSCE 121/hw/[HW] Dungeon Crawler Starter Code/a.out
+--80-- Reading syms from /usr/lib/x86_64-linux-gnu/ld-2.31.so
+--80--   Considering /usr/lib/x86_64-linux-gnu/ld-2.31.so ..
+--80--   .. CRC mismatch (computed 975d0390 wanted 30bd717f)
+--80--   Considering /lib/x86_64-linux-gnu/ld-2.31.so ..
+--80--   .. CRC mismatch (computed 975d0390 wanted 30bd717f)
+--80--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/ld-2.31.so ..
+--80--   .. CRC is valid
+--80-- Reading syms from /usr/lib/x86_64-linux-gnu/valgrind/memcheck-amd64-linux
+--80--    object doesn't have a symbol table
+--80--    object doesn't have a dynamic symbol table
+--80-- Scheduler: using generic scheduler lock implementation.
+--80-- Reading suppressions file: /usr/lib/x86_64-linux-gnu/valgrind/default.supp
+--80-- REDIR: 0x4022e10 (ld-linux-x86-64.so.2:strlen) redirected to 0x580c9ce2 (???)
+--80-- REDIR: 0x4022be0 (ld-linux-x86-64.so.2:index) redirected to 0x580c9cfc (???)
+--80-- Reading syms from /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_core-amd64-linux.so
+--80--    object doesn't have a symbol table
+--80-- Reading syms from /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so
+--80--    object doesn't have a symbol table
+==80== WARNING: new redirection conflicts with existing -- ignoring it
+--80--     old: 0x04022e10 (strlen              ) R-> (0000.0) 0x580c9ce2 ???
+--80--     new: 0x04022e10 (strlen              ) R-> (2007.0) 0x0483f060 strlen
+--80-- REDIR: 0x401f5f0 (ld-linux-x86-64.so.2:strcmp) redirected to 0x483ffd0 (strcmp)
+--80-- REDIR: 0x4023370 (ld-linux-x86-64.so.2:mempcpy) redirected to 0x4843a20 (mempcpy)
+--80-- Reading syms from /usr/lib/x86_64-linux-gnu/libasan.so.5.0.0
+--80--    object doesn't have a symbol table
+--80-- Reading syms from /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28
+--80--    object doesn't have a symbol table
+--80-- Reading syms from /usr/lib/x86_64-linux-gnu/libubsan.so.1.0.0
+--80--    object doesn't have a symbol table
+--80-- Reading syms from /usr/lib/x86_64-linux-gnu/libgcc_s.so.1
+--80--    object doesn't have a symbol table
+--80-- Reading syms from /usr/lib/x86_64-linux-gnu/libc-2.31.so
+--80--   Considering /usr/lib/x86_64-linux-gnu/libc-2.31.so ..
+--80--   .. CRC mismatch (computed 86b78530 wanted e380f01c)
+--80--   Considering /lib/x86_64-linux-gnu/libc-2.31.so ..
+--80--   .. CRC mismatch (computed 86b78530 wanted e380f01c)
+--80--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/libc-2.31.so ..
+--80--   .. CRC is valid
+--80-- Reading syms from /usr/lib/x86_64-linux-gnu/libdl-2.31.so
+--80--   Considering /usr/lib/x86_64-linux-gnu/libdl-2.31.so ..
+--80--   .. CRC mismatch (computed b5d487d3 wanted 6ef97e7c)
+--80--   Considering /lib/x86_64-linux-gnu/libdl-2.31.so ..
+--80--   .. CRC mismatch (computed b5d487d3 wanted 6ef97e7c)
+--80--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/libdl-2.31.so ..
+--80--   .. CRC is valid
+--80-- Reading syms from /usr/lib/x86_64-linux-gnu/librt-2.31.so
+--80--   Considering /usr/lib/x86_64-linux-gnu/librt-2.31.so ..
+--80--   .. CRC mismatch (computed 7d64f7e7 wanted 7c74e986)
+--80--   Considering /lib/x86_64-linux-gnu/librt-2.31.so ..
+--80--   .. CRC mismatch (computed 7d64f7e7 wanted 7c74e986)
+--80--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/librt-2.31.so ..
+--80--   .. CRC is valid
+--80-- Reading syms from /usr/lib/x86_64-linux-gnu/libpthread-2.31.so
+--80--   Considering /usr/lib/debug/.build-id/e5/4761f7b554d0fcc1562959665d93dffbebdaf0.debug ..
+--80--   .. build-id is valid
+--80-- Reading syms from /usr/lib/x86_64-linux-gnu/libm-2.31.so
+--80--   Considering /usr/lib/x86_64-linux-gnu/libm-2.31.so ..
+--80--   .. CRC mismatch (computed fcb42c76 wanted f6c95789)
+--80--   Considering /lib/x86_64-linux-gnu/libm-2.31.so ..
+--80--   .. CRC mismatch (computed fcb42c76 wanted f6c95789)
+--80--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/libm-2.31.so ..
+--80--   .. CRC is valid
+--80-- REDIR: 0x5e90600 (libc.so.6:memmove) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--80-- REDIR: 0x5e8f900 (libc.so.6:strncpy) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--80-- REDIR: 0x5e90930 (libc.so.6:strcasecmp) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--80-- REDIR: 0x5e8f220 (libc.so.6:strcat) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--80-- REDIR: 0x5e8f960 (libc.so.6:rindex) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--80-- REDIR: 0x5e91dd0 (libc.so.6:rawmemchr) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--80-- REDIR: 0x5eace60 (libc.so.6:wmemchr) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--80-- REDIR: 0x5eac9a0 (libc.so.6:wcscmp) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--80-- REDIR: 0x5e90760 (libc.so.6:mempcpy) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--80-- REDIR: 0x5e90590 (libc.so.6:bcmp) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--80-- REDIR: 0x5e8f890 (libc.so.6:strncmp) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--80-- REDIR: 0x5e8f2d0 (libc.so.6:strcmp) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--80-- REDIR: 0x5e906c0 (libc.so.6:memset) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--80-- REDIR: 0x5eac960 (libc.so.6:wcschr) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--80-- REDIR: 0x5e8f7f0 (libc.so.6:strnlen) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--80-- REDIR: 0x5e8f3b0 (libc.so.6:strcspn) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--80-- REDIR: 0x5e90980 (libc.so.6:strncasecmp) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--80-- REDIR: 0x5e8f350 (libc.so.6:strcpy) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--80-- REDIR: 0x5e90ad0 (libc.so.6:memcpy@@GLIBC_2.14) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--80-- REDIR: 0x5eae0d0 (libc.so.6:wcsnlen) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--80-- REDIR: 0x5eac9e0 (libc.so.6:wcscpy) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--80-- REDIR: 0x5e8f9a0 (libc.so.6:strpbrk) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--80-- REDIR: 0x5e8f280 (libc.so.6:index) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--80-- REDIR: 0x5e8f7b0 (libc.so.6:strlen) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--80-- REDIR: 0x5e98d20 (libc.so.6:memrchr) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--80-- REDIR: 0x5e909d0 (libc.so.6:strcasecmp_l) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--80-- REDIR: 0x5e90550 (libc.so.6:memchr) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--80-- REDIR: 0x5eacab0 (libc.so.6:wcslen) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--80-- REDIR: 0x5e8fc60 (libc.so.6:strspn) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--80-- REDIR: 0x5e908d0 (libc.so.6:stpncpy) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--80-- REDIR: 0x5e90870 (libc.so.6:stpcpy) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--80-- REDIR: 0x5e91e10 (libc.so.6:strchrnul) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--80-- REDIR: 0x5e90a20 (libc.so.6:strncasecmp_l) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--80-- REDIR: 0x495f6f0 (libasan.so.5:free) redirected to 0x483c9d0 (free)
+==80== 
+==80== HEAP SUMMARY:
+==80==     in use at exit: 0 bytes in 0 blocks
+==80==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==80== 
+==80== All heap blocks were freed -- no leaks are possible
+==80== 
+==80== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
